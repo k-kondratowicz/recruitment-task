@@ -1,5 +1,14 @@
 # Recruitment Task
 
+## Installation
+
+```
+yarn
+yarn dev
+```
+
+## Packages
+
 I used the `mande` library, a simple and lightweight wrapper around fetch. `mande` reduce boilerplate code while improving maintainability and readability.
 
 ## Error Handling Approach
