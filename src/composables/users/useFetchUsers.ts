@@ -4,7 +4,7 @@ import { useUsersStore } from "../../stores/users";
 export function useFetchUsers() {
     const usersStore = useUsersStore();
 
-    const isUsersPending = computed(() => usersStore.isUsersPending);
+    const areUsersPending = computed(() => usersStore.areUsersPending);
     const users = computed(() => usersStore.users);
 
     onMounted(() => {
@@ -13,6 +13,6 @@ export function useFetchUsers() {
 
     return {
         users,
-        isUsersPending,
+        areUsersPending,
     }
 }

@@ -8,7 +8,7 @@ export const useUsersStore = defineStore('users', {
         const users: UserModel[] = [];
 
         return {
-            isUsersPending: false,
+            areUsersPending: false,
             users,
         }
     },
@@ -17,7 +17,7 @@ export const useUsersStore = defineStore('users', {
         async fetchUsers() {
             const { handleAddToast } = useToastActions();
 
-            this.isUsersPending = true;
+            this.areUsersPending = true;
 
             try {
                 const usersList = await users.get<UserModel[]>();
@@ -26,7 +26,7 @@ export const useUsersStore = defineStore('users', {
             } catch (error) {
                 handleAddToast('Error fetching users');
             } finally {
-                this.isUsersPending = false;
+                this.areUsersPending = false;
             }
         },
     },

@@ -3,13 +3,13 @@ import { useFetchUsers } from '../../composables/users/useFetchUsers';
 import ListContainer from '../list-container/ListContainer.vue';
 import UserItem from './UserItem.vue';
 
-const { isUsersPending, users } = useFetchUsers();
+const { areUsersPending, users } = useFetchUsers();
 </script>
 
 <template>
     <ListContainer
         :heading="'User List'"
-        :is-data-pending="isUsersPending"
+        :is-data-pending="areUsersPending"
         :data="users"
     >
         <template #default>
